@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContainerViewController" customModule="SnapLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4k-gh-5ir">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1er-Xp-SAO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0Y-Y2-wfK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchat" translatesAutoresizingMaskIntoConstraints="NO" id="F6X-jR-srF" customClass="DesignableImageView" customModule="Spring">
+                                <rect key="frame" x="268" y="60" width="63" height="58"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="5.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-4n-zBB" customClass="RQShineLabel">
+                                <rect key="frame" x="279" y="138" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D4k-gh-5ir" secondAttribute="trailing" id="2Si-F5-j5A"/>
+                            <constraint firstItem="1er-Xp-SAO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="318-fJ-Htx"/>
+                            <constraint firstItem="F6X-jR-srF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="4tB-9M-B6q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1er-Xp-SAO" secondAttribute="bottom" id="8Mu-ha-9Bk"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aX-RV-7mi"/>
+                            <constraint firstItem="D4k-gh-5ir" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ASm-nO-RJA"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FiD-GG-Myh"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jra-22-ADT"/>
+                            <constraint firstItem="1er-Xp-SAO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NPF-6D-PdC"/>
+                            <constraint firstAttribute="trailing" secondItem="b0Y-Y2-wfK" secondAttribute="trailing" id="NsW-wL-kHD"/>
+                            <constraint firstItem="D4k-gh-5ir" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Oo4-h1-t6z"/>
+                            <constraint firstItem="D4k-gh-5ir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P1d-2v-rQ1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0Y-Y2-wfK" secondAttribute="bottom" id="RMk-7l-vGM"/>
+                            <constraint firstItem="hAK-4n-zBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXm-mV-FrV"/>
+                            <constraint firstItem="D4k-gh-5ir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TjF-CQ-53F"/>
+                            <constraint firstItem="hAK-4n-zBB" firstAttribute="top" secondItem="F6X-jR-srF" secondAttribute="bottom" constant="20" id="Wcl-P4-DXs"/>
+                            <constraint firstItem="F6X-jR-srF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xco-d2-Kqg"/>
+                            <constraint firstAttribute="trailing" secondItem="b0Y-Y2-wfK" secondAttribute="trailing" id="ZH4-Fd-Cnr"/>
+                            <constraint firstItem="1er-Xp-SAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bd4-VI-Ue1"/>
+                            <constraint firstAttribute="trailing" secondItem="1er-Xp-SAO" secondAttribute="trailing" id="gt5-aL-zGg"/>
+                            <constraint firstItem="1er-Xp-SAO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jn2-ow-p4F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0Y-Y2-wfK" secondAttribute="bottom" id="nEz-WO-H5B"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pdV-wf-9Vz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D4k-gh-5ir" secondAttribute="bottom" id="v6v-bK-OPt"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wrd-ZS-dHB"/>
+                            <constraint firstItem="b0Y-Y2-wfK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xUo-cR-pkj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="D4k-gh-5ir" id="RLB-vl-id6"/>
+                        <outlet property="scrollView" destination="b0Y-Y2-wfK" id="W4V-Mb-w0A"/>
+                        <outlet property="shineLabel" destination="hAK-4n-zBB" id="JJA-oT-xUN"/>
+                        <outlet property="snapGhost" destination="F6X-jR-srF" id="QAz-bo-so2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="360" y="537"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="snapchat" width="63" height="58"/>
+    </resources>
 </document>

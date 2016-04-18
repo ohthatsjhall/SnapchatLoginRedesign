@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SnapLogin" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="Rf3-jE-Vu6" id="aj8-Zj-l5S"/>
+                <outlet property="passwordTextField" destination="A3D-hu-FMR" id="hSV-94-Ivi"/>
+                <outlet property="usernameTextField" destination="v5n-5k-t5h" id="3ca-kI-Ury"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YVT-Hi-lI5">
+                    <rect key="frame" x="145" y="207" width="309" height="186"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="v5n-5k-t5h" customClass="JiroTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="0.0" width="309" height="88"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.80472861842105259" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                    <real key="value" value="0.66700000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="s1E-ar-TXj"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="A3D-hu-FMR" customClass="JiroTextField" customModule="TextFieldEffects">
+                            <rect key="frame" x="0.0" y="98" width="309" height="88"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="309" id="4vx-Xm-12g"/>
+                                <constraint firstAttribute="height" constant="88" id="gnU-wI-EsM"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.80472861839999998" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                    <real key="value" value="0.66700000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="zWo-Dp-tSg"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="A3D-hu-FMR" secondAttribute="trailing" id="0uj-1v-aED"/>
+                        <constraint firstItem="v5n-5k-t5h" firstAttribute="top" secondItem="YVT-Hi-lI5" secondAttribute="top" id="1dQ-br-ZaI"/>
+                        <constraint firstAttribute="bottom" secondItem="A3D-hu-FMR" secondAttribute="bottom" id="Hzc-w9-lyM"/>
+                        <constraint firstItem="A3D-hu-FMR" firstAttribute="top" secondItem="v5n-5k-t5h" secondAttribute="bottom" constant="10" id="QfC-HP-nhE"/>
+                        <constraint firstAttribute="trailing" secondItem="v5n-5k-t5h" secondAttribute="trailing" id="kcR-0X-bfn"/>
+                        <constraint firstItem="v5n-5k-t5h" firstAttribute="leading" secondItem="YVT-Hi-lI5" secondAttribute="leading" id="lOP-ih-14b"/>
+                        <constraint firstItem="A3D-hu-FMR" firstAttribute="leading" secondItem="YVT-Hi-lI5" secondAttribute="leading" id="p1R-NU-eIr"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-jE-Vu6" customClass="DesignableButton" customModule="Spring">
+                    <rect key="frame" x="145" y="490" width="309" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="fpC-Rq-Tyl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="1" green="0.97141444141503652" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginButtonDidTouch:" destination="-1" eventType="touchUpInside" id="nI2-Sd-XsX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Rf3-jE-Vu6" secondAttribute="bottom" constant="40" id="GaF-gA-awc"/>
+                <constraint firstItem="Rf3-jE-Vu6" firstAttribute="width" secondItem="A3D-hu-FMR" secondAttribute="width" id="JFh-2u-CAe"/>
+                <constraint firstItem="YVT-Hi-lI5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="R4h-dm-g2G"/>
+                <constraint firstItem="Rf3-jE-Vu6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jgx-JK-TDu"/>
+                <constraint firstItem="YVT-Hi-lI5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nae-DI-Bwj"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

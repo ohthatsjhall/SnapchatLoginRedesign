@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4F9EA1A12827A6F240483F /* Pods_SnapLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 024BC12E8784D0335899D17F /* Pods_SnapLogin.framework */; };
+		7B0256CE1CC48907001FE1D7 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0256CD1CC48907001FE1D7 /* Animator.swift */; };
+		7B3640CB1CC3F5B600FAA777 /* MavenProLight-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3640CA1CC3F55B00FAA777 /* MavenProLight-300.otf */; };
+		7B3640CC1CC3F5B600FAA777 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3640C71CC3F52B00FAA777 /* OpenSans-Light.ttf */; };
+		7B3640CD1CC3F5B600FAA777 /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3640C91CC3F54900FAA777 /* MavenPro-Regular.ttf */; };
+		7B3640CE1CC3F5B600FAA777 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3640C81CC3F52B00FAA777 /* OpenSans-Regular.ttf */; };
+		7B3640D11CC42DB600FAA777 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3640CF1CC42DB600FAA777 /* SignUpViewController.swift */; };
+		7B3640D21CC42DB600FAA777 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3640D01CC42DB600FAA777 /* SignUpViewController.xib */; };
+		7B9FCB7D1CC0A51600C01505 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9FCB7B1CC0A51600C01505 /* LoginViewController.swift */; };
+		7B9FCB7E1CC0A51600C01505 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9FCB7C1CC0A51600C01505 /* LoginViewController.xib */; };
 		7BF33AFA1CC09DC70028182E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF33AF91CC09DC70028182E /* AppDelegate.swift */; };
-		7BF33AFC1CC09DC70028182E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF33AFB1CC09DC70028182E /* ViewController.swift */; };
+		7BF33AFC1CC09DC70028182E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF33AFB1CC09DC70028182E /* ContainerViewController.swift */; };
 		7BF33AFF1CC09DC70028182E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF33AFD1CC09DC70028182E /* Main.storyboard */; };
 		7BF33B011CC09DC70028182E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF33B001CC09DC70028182E /* Assets.xcassets */; };
 		7BF33B041CC09DC70028182E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF33B021CC09DC70028182E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024BC12E8784D0335899D17F /* Pods_SnapLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF703377A9C6F1C4AD1237A /* Pods-SnapLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapLogin/Pods-SnapLogin.release.xcconfig"; sourceTree = "<group>"; };
+		7B0256CD1CC48907001FE1D7 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		7B3640C71CC3F52B00FAA777 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		7B3640C81CC3F52B00FAA777 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		7B3640C91CC3F54900FAA777 /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		7B3640CA1CC3F55B00FAA777 /* MavenProLight-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-300.otf"; sourceTree = "<group>"; };
+		7B3640CF1CC42DB600FAA777 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7B3640D01CC42DB600FAA777 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		7B9FCB7B1CC0A51600C01505 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B9FCB7C1CC0A51600C01505 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		7BF33AF61CC09DC60028182E /* SnapLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF33AF91CC09DC70028182E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BF33AFB1CC09DC70028182E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BF33AFB1CC09DC70028182E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		7BF33AFE1CC09DC70028182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BF33B001CC09DC70028182E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF33B031CC09DC70028182E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF33B051CC09DC70028182E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF9F7FDB6A51ED670F9719D /* Pods-SnapLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapLogin/Pods-SnapLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,78 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4F9EA1A12827A6F240483F /* Pods_SnapLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BC548FAB4D1F32F9E293A98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDF9F7FDB6A51ED670F9719D /* Pods-SnapLogin.debug.xcconfig */,
+				6EF703377A9C6F1C4AD1237A /* Pods-SnapLogin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64DA44939A44E46CD0B9E983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				024BC12E8784D0335899D17F /* Pods_SnapLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B0256CC1CC45EA6001FE1D7 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7B3640CA1CC3F55B00FAA777 /* MavenProLight-300.otf */,
+				7B3640C71CC3F52B00FAA777 /* OpenSans-Light.ttf */,
+				7B3640C91CC3F54900FAA777 /* MavenPro-Regular.ttf */,
+				7B3640C81CC3F52B00FAA777 /* OpenSans-Regular.ttf */,
+			);
+			name = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		7B3640D31CC42DC100FAA777 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B3640CF1CC42DB600FAA777 /* SignUpViewController.swift */,
+				7B3640D01CC42DB600FAA777 /* SignUpViewController.xib */,
+			);
+			name = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		7B9FCB7A1CC0A41500C01505 /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				7B0256CD1CC48907001FE1D7 /* Animator.swift */,
+				7BF33B001CC09DC70028182E /* Assets.xcassets */,
+				7BF33B021CC09DC70028182E /* LaunchScreen.storyboard */,
+				7BF33B051CC09DC70028182E /* Info.plist */,
+				7B0256CC1CC45EA6001FE1D7 /* Custom Fonts */,
+			);
+			name = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		7B9FCB7F1CC0A51C00C01505 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B9FCB7B1CC0A51600C01505 /* LoginViewController.swift */,
+				7B9FCB7C1CC0A51600C01505 /* LoginViewController.xib */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
 		7BF33AED1CC09DC60028182E = {
 			isa = PBXGroup;
 			children = (
 				7BF33AF81CC09DC70028182E /* SnapLogin */,
 				7BF33AF71CC09DC60028182E /* Products */,
+				2BC548FAB4D1F32F9E293A98 /* Pods */,
+				64DA44939A44E46CD0B9E983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				7BF33AF91CC09DC70028182E /* AppDelegate.swift */,
-				7BF33AFB1CC09DC70028182E /* ViewController.swift */,
+				7BF33AFB1CC09DC70028182E /* ContainerViewController.swift */,
 				7BF33AFD1CC09DC70028182E /* Main.storyboard */,
-				7BF33B001CC09DC70028182E /* Assets.xcassets */,
-				7BF33B021CC09DC70028182E /* LaunchScreen.storyboard */,
-				7BF33B051CC09DC70028182E /* Info.plist */,
+				7B9FCB7F1CC0A51C00C01505 /* LoginViewController */,
+				7B3640D31CC42DC100FAA777 /* SignUpViewController */,
+				7B9FCB7A1CC0A41500C01505 /* Supporting FIles */,
 			);
 			path = SnapLogin;
 			sourceTree = "<group>";
@@ -71,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BF33B081CC09DC70028182E /* Build configuration list for PBXNativeTarget "SnapLogin" */;
 			buildPhases = (
+				521E4BE10670266E975180A8 /* Check Pods Manifest.lock */,
 				7BF33AF21CC09DC60028182E /* Sources */,
 				7BF33AF31CC09DC60028182E /* Frameworks */,
 				7BF33AF41CC09DC60028182E /* Resources */,
+				CA81C39DCC97FBC4B1AFE631 /* Embed Pods Frameworks */,
+				08DE30173A0A383711873CAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +182,7 @@
 				TargetAttributes = {
 					7BF33AF51CC09DC60028182E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PBVUXBPDEA;
 					};
 				};
 			};
@@ -122,20 +209,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3640CD1CC3F5B600FAA777 /* MavenPro-Regular.ttf in Resources */,
+				7B3640CC1CC3F5B600FAA777 /* OpenSans-Light.ttf in Resources */,
+				7B3640CB1CC3F5B600FAA777 /* MavenProLight-300.otf in Resources */,
+				7B9FCB7E1CC0A51600C01505 /* LoginViewController.xib in Resources */,
+				7B3640D21CC42DB600FAA777 /* SignUpViewController.xib in Resources */,
 				7BF33B041CC09DC70028182E /* LaunchScreen.storyboard in Resources */,
 				7BF33B011CC09DC70028182E /* Assets.xcassets in Resources */,
+				7B3640CE1CC3F5B600FAA777 /* OpenSans-Regular.ttf in Resources */,
 				7BF33AFF1CC09DC70028182E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08DE30173A0A383711873CAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapLogin/Pods-SnapLogin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521E4BE10670266E975180A8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA81C39DCC97FBC4B1AFE631 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapLogin/Pods-SnapLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BF33AF21CC09DC60028182E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BF33AFC1CC09DC70028182E /* ViewController.swift in Sources */,
+				7B0256CE1CC48907001FE1D7 /* Animator.swift in Sources */,
+				7B9FCB7D1CC0A51600C01505 /* LoginViewController.swift in Sources */,
+				7BF33AFC1CC09DC70028182E /* ContainerViewController.swift in Sources */,
+				7B3640D11CC42DB600FAA777 /* SignUpViewController.swift in Sources */,
 				7BF33AFA1CC09DC70028182E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,8 +391,10 @@
 		};
 		7BF33B091CC09DC70028182E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF9F7FDB6A51ED670F9719D /* Pods-SnapLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SnapLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhall.SnapLogin;
@@ -258,8 +404,10 @@
 		};
 		7BF33B0A1CC09DC70028182E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EF703377A9C6F1C4AD1237A /* Pods-SnapLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SnapLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhall.SnapLogin;
@@ -286,6 +434,7 @@
 				7BF33B0A1CC09DC70028182E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
