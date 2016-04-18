@@ -7,29 +7,61 @@
 //
 
 import UIKit
+import Spring
+import TextFieldEffects
+
+protocol SignUpViewControllerDelegate: class {
+  func userSignUpWasSuccessful(success: Bool)
+}
 
 class SignUpViewController: UIViewController {
+  
+  
+  @IBOutlet weak var emailAddressTextField: JiroTextField!
+  @IBOutlet weak var passwordTextField: JiroTextField!
+  @IBOutlet weak var signUpButton: DesignableButton!
+  
+  weak var delegate: SignUpViewControllerDelegate?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+      super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+  @IBAction func signUpButtonDidTouch(sender: DesignableButton) {
+    passwordTextField.text?.length >= 8 ? delegate?.userSignUpWasSuccessful(true) : delegate?.userSignUpWasSuccessful(false)
+  }
+
+  
+
+}
+
+
+extension SignUpViewController: UITextFieldDelegate {
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    
+    switch textField {
+      
+    case emailAddressTextField:
+      passwordTextField.becomeFirstResponder()
+      
+    case passwordTextField:
+      passwordTextField.resignFirstResponder()
+      self.signUpButtonDidTouch(signUpButton)
+      
+    default:
+      break
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    return true
+  }
+  
+  // not technically UITextFieldDelegate Method, but it resigns keyboards if open.
+  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+    view.endEditing(true)
+    super.touchesBegan(touches, withEvent: event)
+  }
+  
 }

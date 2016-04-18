@@ -26,10 +26,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YVT-Hi-lI5">
-                    <rect key="frame" x="145" y="207" width="309" height="186"/>
+                    <rect key="frame" x="146" y="215" width="309" height="170"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="v5n-5k-t5h" customClass="JiroTextField" customModule="TextFieldEffects">
-                            <rect key="frame" x="0.0" y="0.0" width="309" height="88"/>
+                            <rect key="frame" x="0.0" y="0.0" width="309" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
@@ -39,7 +39,7 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.80472861842105259" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                     <real key="value" value="0.66700000000000004"/>
@@ -50,11 +50,11 @@
                             </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="A3D-hu-FMR" customClass="JiroTextField" customModule="TextFieldEffects">
-                            <rect key="frame" x="0.0" y="98" width="309" height="88"/>
+                            <rect key="frame" x="0.0" y="90" width="309" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="309" id="4vx-Xm-12g"/>
-                                <constraint firstAttribute="height" constant="88" id="gnU-wI-EsM"/>
+                                <constraint firstAttribute="height" constant="80" id="gnU-wI-EsM"/>
                             </constraints>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
@@ -64,7 +64,7 @@
                                     <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.80472861839999998" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="value" red="0.90442708333333333" green="0.90442708333333333" blue="0.90442708333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                     <real key="value" value="0.66700000000000004"/>
@@ -86,7 +86,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf3-jE-Vu6" customClass="DesignableButton" customModule="Spring">
-                    <rect key="frame" x="145" y="490" width="309" height="70"/>
+                    <rect key="frame" x="146" y="490" width="309" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="fpC-Rq-Tyl"/>
                     </constraints>

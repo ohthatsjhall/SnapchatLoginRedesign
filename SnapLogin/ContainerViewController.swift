@@ -63,16 +63,18 @@ class ContainerViewController: UIViewController {
     let width = self.view.frame.size.width
     let height = self.view.frame.size.height
     
-    let signUpController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
+    let signUpViewController = SignUpViewController(nibName: "SignUpViewController", bundle: nil)
     // make the origin of the second view controller to the outer frame of the first view controller
     // when you scroll, the start of the second view controller will be where the first one ends.
-    var frame1 = signUpController.view.frame
+    // set the SignUpViewController Delegate to ContainerViewController(self)
+    signUpViewController.delegate = self
+    var frame1 = signUpViewController.view.frame
     frame1.origin.x = self.view.frame.size.width
-    signUpController.view.frame = frame1
+    signUpViewController.view.frame = frame1
     
-    self.addChildViewController(signUpController)
-    scrollView.addSubview(signUpController.view)
-    signUpController.didMoveToParentViewController(self)
+    self.addChildViewController(signUpViewController)
+    scrollView.addSubview(signUpViewController.view)
+    signUpViewController.didMoveToParentViewController(self)
     
     // replace number '2' with how many views you'd like in your scroll view.
     scrollView.contentSize = CGSizeMake(width * 2, height)
@@ -123,10 +125,26 @@ class ContainerViewController: UIViewController {
   
 }
 
-extension ContainerViewController: LoginViewControllerDelegate {
+extension ContainerViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    print("scrollView Content Offset x-axis: \(scrollView.contentOffset.x)")
+  }
+}
+
+extension ContainerViewController: LoginViewControllerDelegate, SignUpViewControllerDelegate {
   
   func userLoginAttempt(loginWasSuccessfull: Bool) {
     if loginWasSuccessfull {
+      let happyGhost = UIImage(named: "happyghost")
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: happyGhost!)
+    } else {
+      let madGhost = UIImage(named: "madghost")
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: madGhost!)
+    }
+  }
+  
+  func userSignUpWasSuccessful(success: Bool) {
+    if success {
       let happyGhost = UIImage(named: "happyghost")
       Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: happyGhost!)
     } else {
