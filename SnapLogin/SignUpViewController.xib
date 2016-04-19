@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7v1-hy-OKH">
-                    <rect key="frame" x="146" y="215" width="309" height="170"/>
+                    <rect key="frame" x="146" y="210" width="309" height="170"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-KL-anR" customClass="JiroTextField" customModule="TextFieldEffects">
                             <rect key="frame" x="0.0" y="0.0" width="309" height="80"/>
@@ -81,7 +81,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTv-bV-UiC" customClass="DesignableButton" customModule="Spring">
-                    <rect key="frame" x="146" y="490" width="309" height="70"/>
+                    <rect key="frame" x="146" y="470" width="309" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="npy-VI-xdy"/>
                     </constraints>
@@ -104,11 +104,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="BTv-bV-UiC" secondAttribute="bottom" constant="40" id="bxk-oT-g9G"/>
+                <constraint firstAttribute="bottom" secondItem="BTv-bV-UiC" secondAttribute="bottom" constant="60" id="bxk-oT-g9G"/>
                 <constraint firstItem="7v1-hy-OKH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cC5-Xg-Gob"/>
                 <constraint firstItem="BTv-bV-UiC" firstAttribute="width" secondItem="3y2-72-CoN" secondAttribute="width" id="n7A-S8-lEo"/>
                 <constraint firstItem="BTv-bV-UiC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pI3-yI-WrU"/>
-                <constraint firstItem="7v1-hy-OKH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xJ3-Hl-OW5"/>
+                <constraint firstItem="7v1-hy-OKH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-5" id="xJ3-Hl-OW5"/>
             </constraints>
         </view>
     </objects>

@@ -4,6 +4,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Container View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1er-Xp-SAO">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1er-Xp-SAO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -52,6 +58,50 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-AT-rj8" customClass="DesignableButton" customModule="Spring">
+                                <rect key="frame" x="195" y="552" width="210" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6NU-uj-5bP"/>
+                                    <constraint firstAttribute="width" constant="210" id="Fcc-wU-Vou"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="Already have an account?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdf-eN-RRA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McW-X0-677" customClass="DesignableButton" customModule="Spring">
+                                <rect key="frame" x="195" y="552" width="210" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="S1d-q6-k2V"/>
+                                    <constraint firstAttribute="height" constant="40" id="mBW-LO-jgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="Don't have an account yet?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUpButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjH-35-KsB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -63,20 +113,24 @@
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ASm-nO-RJA"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FiD-GG-Myh"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jra-22-ADT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sga-AT-rj8" secondAttribute="bottom" constant="8" id="Lza-Am-wnI"/>
                             <constraint firstItem="1er-Xp-SAO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NPF-6D-PdC"/>
                             <constraint firstAttribute="trailing" secondItem="b0Y-Y2-wfK" secondAttribute="trailing" id="NsW-wL-kHD"/>
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Oo4-h1-t6z"/>
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P1d-2v-rQ1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0Y-Y2-wfK" secondAttribute="bottom" id="RMk-7l-vGM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="McW-X0-677" secondAttribute="bottom" constant="8" id="SLe-0T-o1h"/>
                             <constraint firstItem="hAK-4n-zBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXm-mV-FrV"/>
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TjF-CQ-53F"/>
                             <constraint firstItem="hAK-4n-zBB" firstAttribute="top" secondItem="F6X-jR-srF" secondAttribute="bottom" constant="20" id="Wcl-P4-DXs"/>
                             <constraint firstItem="F6X-jR-srF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xco-d2-Kqg"/>
                             <constraint firstAttribute="trailing" secondItem="b0Y-Y2-wfK" secondAttribute="trailing" id="ZH4-Fd-Cnr"/>
                             <constraint firstItem="1er-Xp-SAO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bd4-VI-Ue1"/>
+                            <constraint firstItem="McW-X0-677" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0K-bz-swy"/>
                             <constraint firstAttribute="trailing" secondItem="1er-Xp-SAO" secondAttribute="trailing" id="gt5-aL-zGg"/>
                             <constraint firstItem="1er-Xp-SAO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jn2-ow-p4F"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0Y-Y2-wfK" secondAttribute="bottom" id="nEz-WO-H5B"/>
+                            <constraint firstItem="Sga-AT-rj8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oWi-rj-smn"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pdV-wf-9Vz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D4k-gh-5ir" secondAttribute="bottom" id="v6v-bK-OPt"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wrd-ZS-dHB"/>
@@ -85,8 +139,10 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="D4k-gh-5ir" id="RLB-vl-id6"/>
+                        <outlet property="loginButton" destination="Sga-AT-rj8" id="wJB-54-ZNB"/>
                         <outlet property="scrollView" destination="b0Y-Y2-wfK" id="W4V-Mb-w0A"/>
                         <outlet property="shineLabel" destination="hAK-4n-zBB" id="JJA-oT-xUN"/>
+                        <outlet property="signupButton" destination="McW-X0-677" id="yD7-aD-UOI"/>
                         <outlet property="snapGhost" destination="F6X-jR-srF" id="QAz-bo-so2"/>
                     </connections>
                 </viewController>
