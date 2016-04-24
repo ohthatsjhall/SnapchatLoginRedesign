@@ -70,16 +70,13 @@ class ContainerViewController: UIViewController {
   }
   
   func scrollToSignUpView() {
-    UIView.animateWithDuration(0.80, delay: 0.0, usingSpringWithDamping: 0.70, initialSpringVelocity: 0.0, options: [], animations: {
+    
+    UIView.animateWithDuration(0.80, delay: 0.0, usingSpringWithDamping: 0.667, initialSpringVelocity: 0.0, options: [], animations: {
       
       if !self.signUpIsPresented {
-        //self.loginButton.alpha = 1.0
         self.scrollView.contentOffset.x = self.view.frame.width
-        self.signUpIsPresented = true
       } else {
-        //self.loginButton.alpha = 0.0
         self.scrollView.contentOffset.x = 0.0
-        self.signUpIsPresented = false
       }
       
       }, completion: nil)
@@ -167,15 +164,29 @@ class ContainerViewController: UIViewController {
 }
 
 extension ContainerViewController: UIScrollViewDelegate {
+  
   func scrollViewDidScroll(scrollView: UIScrollView) {
-    print("xoffset: \(scrollView.contentOffset.x)")
+    
+    let maxAlpha: CGFloat = 0.97
+    let minAlpha: CGFloat = 0.01
     if scrollView.contentOffset.x >= containerSize / 2 {
       signupButton.setTitle("Already have an account?", forState: .Normal)
+      signupButton.alpha = calculateAlphaUsingScrollView(
+        scrollView,
+        withAlphaForOffsetZero: minAlpha,
+        withAlphaForOffsetMax: maxAlpha)
       signUpIsPresented = true
+      
     } else {
+      
       signupButton.setTitle("Don't have an account yet?", forState: .Normal)
+      signupButton.alpha = calculateAlphaUsingScrollView(
+        scrollView,
+        withAlphaForOffsetZero: maxAlpha,
+        withAlphaForOffsetMax: minAlpha)
       signUpIsPresented = false
     }
+    
   }
   
   func calculateAlphaUsingScrollView(scrollView: UIScrollView, withAlphaForOffsetZero alphaForOffsetZero: CGFloat, withAlphaForOffsetMax alphaForOffsetMax: CGFloat) -> CGFloat {
@@ -189,13 +200,6 @@ extension ContainerViewController: UIScrollViewDelegate {
     print("final alpha: \(finalAlpha)")
     return finalAlpha
   }
-  
-  func updateViews() {
-    let maxAlpha: CGFloat = 0.97
-    let minAlpha: CGFloat = 0.05
-    signupButton.alpha = calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha)
-    
-  }
 
 }
 
@@ -205,21 +209,17 @@ extension ContainerViewController: LoginViewControllerDelegate, SignUpViewContro
   
   func userLoginAttempt(loginWasSuccessfull: Bool) {
     if loginWasSuccessfull {
-      let happyGhost = UIImage(named: "happyghost")
-      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: happyGhost!)
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "happyghost")!)
     } else {
-      let madGhost = UIImage(named: "madghost")
-      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: madGhost!)
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "madghost")!)
     }
   }
   
   func userSignUpWasSuccessful(success: Bool) {
     if success {
-      let happyGhost = UIImage(named: "happyghost")
-      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: happyGhost!)
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "happyghost")!)
     } else {
-      let madGhost = UIImage(named: "madghost")
-      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: madGhost!)
+      Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "madghost")!)
     }
   }
   
