@@ -7,7 +7,6 @@
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
-            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -58,28 +57,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-AT-rj8" customClass="DesignableButton" customModule="Spring">
-                                <rect key="frame" x="195" y="552" width="210" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="6NU-uj-5bP"/>
-                                    <constraint firstAttribute="width" constant="210" id="Fcc-wU-Vou"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                                <state key="normal" title="Already have an account?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="signUpButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdf-eN-RRA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McW-X0-677" customClass="DesignableButton" customModule="Spring">
                                 <rect key="frame" x="195" y="552" width="210" height="40"/>
                                 <constraints>
@@ -113,7 +90,6 @@
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ASm-nO-RJA"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FiD-GG-Myh"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jra-22-ADT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sga-AT-rj8" secondAttribute="bottom" constant="8" id="Lza-Am-wnI"/>
                             <constraint firstItem="1er-Xp-SAO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NPF-6D-PdC"/>
                             <constraint firstAttribute="trailing" secondItem="b0Y-Y2-wfK" secondAttribute="trailing" id="NsW-wL-kHD"/>
                             <constraint firstItem="D4k-gh-5ir" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Oo4-h1-t6z"/>
@@ -130,7 +106,6 @@
                             <constraint firstAttribute="trailing" secondItem="1er-Xp-SAO" secondAttribute="trailing" id="gt5-aL-zGg"/>
                             <constraint firstItem="1er-Xp-SAO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jn2-ow-p4F"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b0Y-Y2-wfK" secondAttribute="bottom" id="nEz-WO-H5B"/>
-                            <constraint firstItem="Sga-AT-rj8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oWi-rj-smn"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pdV-wf-9Vz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D4k-gh-5ir" secondAttribute="bottom" id="v6v-bK-OPt"/>
                             <constraint firstItem="b0Y-Y2-wfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wrd-ZS-dHB"/>
@@ -139,7 +114,6 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="D4k-gh-5ir" id="RLB-vl-id6"/>
-                        <outlet property="loginButton" destination="Sga-AT-rj8" id="wJB-54-ZNB"/>
                         <outlet property="scrollView" destination="b0Y-Y2-wfK" id="W4V-Mb-w0A"/>
                         <outlet property="shineLabel" destination="hAK-4n-zBB" id="JJA-oT-xUN"/>
                         <outlet property="signupButton" destination="McW-X0-677" id="yD7-aD-UOI"/>

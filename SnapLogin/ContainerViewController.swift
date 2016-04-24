@@ -15,7 +15,7 @@ import Spring
 class ContainerViewController: UIViewController {
   
   
-  @IBOutlet weak var loginButton: DesignableButton!
+  //@IBOutlet weak var loginButton: DesignableButton!
   @IBOutlet weak var signupButton: DesignableButton!
 
   @IBOutlet weak var cameraView: UIView!
@@ -26,6 +26,17 @@ class ContainerViewController: UIViewController {
   var captureSession: AVCaptureSession?
   var stillImageOutput: AVCaptureStillImageOutput?
   var previewLayer: AVCaptureVideoPreviewLayer?
+  var containerSize: CGFloat = 0.0 {
+    didSet {
+      let maxAlpha: CGFloat = 0.97
+      let minAlpha: CGFloat = 0.01
+      signupButton.alpha = calculateAlphaUsingScrollView(
+        scrollView,
+        withAlphaForOffsetZero: maxAlpha,
+        withAlphaForOffsetMax: minAlpha)
+      print(calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha))
+    }
+  }
   var signUpIsPresented = false
   
   
@@ -62,13 +73,11 @@ class ContainerViewController: UIViewController {
     UIView.animateWithDuration(0.80, delay: 0.0, usingSpringWithDamping: 0.70, initialSpringVelocity: 0.0, options: [], animations: {
       
       if !self.signUpIsPresented {
-        self.signupButton.alpha = 0.0
-        self.loginButton.alpha = 1.0
+        //self.loginButton.alpha = 1.0
         self.scrollView.contentOffset.x = self.view.frame.width
         self.signUpIsPresented = true
       } else {
-        self.signupButton.alpha = 1.0
-        self.loginButton.alpha = 0.0
+        //self.loginButton.alpha = 0.0
         self.scrollView.contentOffset.x = 0.0
         self.signUpIsPresented = false
       }
@@ -107,6 +116,8 @@ class ContainerViewController: UIViewController {
     
     // replace number '2' with how many views you'd like in your scroll view.
     scrollView.contentSize = CGSizeMake(width * 2, height)
+    containerSize = scrollView.contentSize.width / 2
+    print(containerSize)
   }
   
   // MARK: - Shine Label
@@ -152,30 +163,42 @@ class ContainerViewController: UIViewController {
     } catch { print("error with capture session: \(error)") }
   }
   
+  
 }
 
-//extension ContainerViewController: UIScrollViewDelegate {
-//  func scrollViewDidScroll(scrollView: UIScrollView) {
-//    let maxAlpha: CGFloat = 0.97
-//    let minAlpha: CGFloat = 0.15
-//    signupButton.alpha = calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha)
-//    print(calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha))
-//    print("scrollView Content Offset x-axis: \(scrollViewOffsetX)")
-//  }
-//  
-//  func calculateAlphaUsingScrollView(scrollView: UIScrollView, withAlphaForOffsetZero alphaForOffsetZero: CGFloat, withAlphaForOffsetMax alphaForOffsetMax: CGFloat) -> CGFloat {
-//    let width = scrollView.frame.size.width
-//    let contentWidth = scrollView.contentSize.width
-//    let scrollLength = contentWidth - width
-//    let scrollOffset = scrollView.contentOffset.x
-//    let scrollValue = scrollOffset / scrollLength
-//    let alphaChange = alphaForOffsetMax - alphaForOffsetZero
-//    let finalAlpha = alphaForOffsetZero + alphaChange * scrollValue
-//    print("final alpha: \(finalAlpha)")
-//    return finalAlpha
-//  }
-//  
-//}
+extension ContainerViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    print("xoffset: \(scrollView.contentOffset.x)")
+    if scrollView.contentOffset.x >= containerSize / 2 {
+      signupButton.setTitle("Already have an account?", forState: .Normal)
+      signUpIsPresented = true
+    } else {
+      signupButton.setTitle("Don't have an account yet?", forState: .Normal)
+      signUpIsPresented = false
+    }
+  }
+  
+  func calculateAlphaUsingScrollView(scrollView: UIScrollView, withAlphaForOffsetZero alphaForOffsetZero: CGFloat, withAlphaForOffsetMax alphaForOffsetMax: CGFloat) -> CGFloat {
+    let width = scrollView.frame.size.width
+    let contentWidth = scrollView.contentSize.width
+    let scrollLength = contentWidth - width
+    let scrollOffset = scrollView.contentOffset.x
+    let scrollValue = scrollOffset / scrollLength
+    let alphaChange = alphaForOffsetMax - alphaForOffsetZero
+    let finalAlpha = alphaForOffsetZero + alphaChange * scrollValue
+    print("final alpha: \(finalAlpha)")
+    return finalAlpha
+  }
+  
+  func updateViews() {
+    let maxAlpha: CGFloat = 0.97
+    let minAlpha: CGFloat = 0.05
+    signupButton.alpha = calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha)
+    
+  }
+
+}
+
 
 
 extension ContainerViewController: LoginViewControllerDelegate, SignUpViewControllerDelegate {
