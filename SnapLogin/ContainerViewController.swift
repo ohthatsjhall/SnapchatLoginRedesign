@@ -38,7 +38,7 @@ class ContainerViewController: UIViewController {
     }
   }
   
-  
+  // MARK: View Controller Lifecycle
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
