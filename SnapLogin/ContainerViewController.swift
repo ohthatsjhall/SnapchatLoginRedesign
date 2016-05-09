@@ -14,8 +14,6 @@ import Spring
 
 class ContainerViewController: UIViewController {
   
-  
-  //@IBOutlet weak var loginButton: DesignableButton!
   @IBOutlet weak var signupButton: DesignableButton!
 
   @IBOutlet weak var cameraView: UIView!
@@ -23,9 +21,12 @@ class ContainerViewController: UIViewController {
   @IBOutlet weak var shineLabel: RQShineLabel!
   @IBOutlet weak var snapGhost: DesignableImageView!
   
+  var signUpIsPresented = false
+  
   var captureSession: AVCaptureSession?
   var stillImageOutput: AVCaptureStillImageOutput?
   var previewLayer: AVCaptureVideoPreviewLayer?
+  
   var containerSize: CGFloat = 0.0 {
     didSet {
       let maxAlpha: CGFloat = 0.97
@@ -34,10 +35,9 @@ class ContainerViewController: UIViewController {
         scrollView,
         withAlphaForOffsetZero: maxAlpha,
         withAlphaForOffsetMax: minAlpha)
-      print(calculateAlphaUsingScrollView(scrollView, withAlphaForOffsetZero: maxAlpha, withAlphaForOffsetMax: minAlpha))
     }
   }
-  var signUpIsPresented = false
+  
   
   
   override func viewWillAppear(animated: Bool) {
@@ -114,7 +114,6 @@ class ContainerViewController: UIViewController {
     // replace number '2' with how many views you'd like in your scroll view.
     scrollView.contentSize = CGSizeMake(width * 2, height)
     containerSize = scrollView.contentSize.width / 2
-    print(containerSize)
   }
   
   // MARK: - Shine Label
@@ -123,9 +122,9 @@ class ContainerViewController: UIViewController {
     shineLabel.backgroundColor = UIColor.clearColor()
     shineLabel.numberOfLines = 0
     shineLabel.text = "Snapchat"
-    shineLabel.font = UIFont(name: "AvenirNext-Regular", size: 34.0)
+    shineLabel.font = UIFont(name: "AvenirNext-Regular", size: 35.0)
     shineLabel.center = self.view.center
-    shineLabel.shineDuration = 6.5
+    shineLabel.shineDuration = 7.0
     shineLabel.sizeToFit()
     view.addSubview(shineLabel)
   }
@@ -197,7 +196,7 @@ extension ContainerViewController: UIScrollViewDelegate {
     let scrollValue = scrollOffset / scrollLength
     let alphaChange = alphaForOffsetMax - alphaForOffsetZero
     let finalAlpha = alphaForOffsetZero + alphaChange * scrollValue
-    print("final alpha: \(finalAlpha)")
+
     return finalAlpha
   }
 
