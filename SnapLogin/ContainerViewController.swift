@@ -206,8 +206,8 @@ extension ContainerViewController: UIScrollViewDelegate {
 
 extension ContainerViewController: LoginViewControllerDelegate, SignUpViewControllerDelegate {
   
-  func userLoginAttempt(loginWasSuccessfull: Bool) {
-    if loginWasSuccessfull {
+  func userLoginAttempt(success: Bool) {
+    if success {
       Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "happyghost")!)
     } else {
       Animator.animateGhostAfterLoginAttempt(snapGhost, forImage: UIImage(named: "madghost")!)

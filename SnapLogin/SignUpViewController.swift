@@ -16,9 +16,6 @@ protocol SignUpViewControllerDelegate: class {
 
 class SignUpViewController: UIViewController {
   
-  
-  
-  
   @IBOutlet weak var emailAddressTextField: JiroTextField!
   @IBOutlet weak var passwordTextField: JiroTextField!
   @IBOutlet weak var signUpButton: DesignableButton!
@@ -34,9 +31,6 @@ class SignUpViewController: UIViewController {
   @IBAction func signUpButtonDidTouch(sender: DesignableButton) {
     passwordTextField.text?.length >= 8 ? delegate?.userSignUpWasSuccessful(true) : delegate?.userSignUpWasSuccessful(false)
   }
-
-  
-
 }
 
 

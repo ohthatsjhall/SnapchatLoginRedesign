@@ -13,7 +13,7 @@ import TextFieldEffects
 import Spring
 
 protocol LoginViewControllerDelegate: class {
-  func userLoginAttempt(loginWasSuccessfull: Bool)
+  func userLoginAttempt(success: Bool)
 }
 
 class LoginViewController: UIViewController {
@@ -42,6 +42,8 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate {
+  
+  // allows user to toggle to next text field
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     
