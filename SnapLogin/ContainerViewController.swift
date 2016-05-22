@@ -130,6 +130,7 @@ class ContainerViewController: UIViewController {
   }
 
   // MARK: - Capture Session
+  // initialize the capture session that will act as the login /sign-up background
   func setupCaptureSession() {
     captureSession = AVCaptureSession()
     captureSession?.sessionPreset = AVCaptureSessionPresetHigh
