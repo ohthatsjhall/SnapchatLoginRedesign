@@ -49,7 +49,9 @@ class ContainerViewController: UIViewController {
     super.viewDidAppear(animated)
     previewLayer?.frame = cameraView.bounds
     shineLabel.shineWithCompletion {
-      self.shineLabel.fadeOut()
+      self.shineLabel.fadeOutWithCompletion({ 
+        self.shineLabel.shine()
+      })
     }
   }
   
@@ -122,7 +124,7 @@ class ContainerViewController: UIViewController {
     shineLabel.backgroundColor = UIColor.clearColor()
     shineLabel.numberOfLines = 0
     shineLabel.text = "Snapchat"
-    shineLabel.font = UIFont(name: "AvenirNext-Regular", size: 35.0)
+    shineLabel.font = UIFont(name: "AvenirNext-Regular", size: 36.0)
     shineLabel.center = self.view.center
     shineLabel.shineDuration = 7.0
     shineLabel.sizeToFit()
